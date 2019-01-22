@@ -1,0 +1,6 @@
+version: '3'
+services:
+  config:
+    build:
+      context: ./
+      dockerfile: Dockerfile
