@@ -1,0 +1,122 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" YouCompleteMePlugin
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'alvan/vim-closetag'
+
+" Plugin 'plugin/YouCompleteMe/plugin/youcompleteme.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set colorcolumn=120
+set hlsearch
+" set autoindent
+" set tabstop=2
+set nu
+set autoread
+set cursorline
+" colorscheme railscasts
+" colorscheme darktango
+" colorscheme sadasant
+" colorscheme 256_noir
+" colorscheme vctr
+" colorscheme material
+" colorscheme wellsokai
+" FOR NORMAL ACTIVITY (HIGHT BRIGTHNESS) SUBLIME-LIKE THEME--------
+" colorscheme monokai
+colorscheme darcula
+" ---------------------------------------------------------------------------------------
+" colorscheme sky
+" colorscheme nets-away
+" colorscheme aquamarine
+" ###########################################################################################
+" FOR SPECIAL CASES (LOW BRIGTHNESS)
+" colorscheme laederon
+" colorscheme hilal
+" colorscheme nighted
+" colorscheme zazen
+" colorscheme blaquemagick
+" colorscheme fahrenheit
+" colorscheme Crystallite
+" colorscheme firewatch
+
+" set statusline+=%{GitBranchInfoString()}
+set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 0
+" Set syntastic_check_on_open to 1 if you need syntastic to start working as
+" soon as the file is opened, otherwise use Ctrl + t toggle
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['jscs', 'jshint']
+" let g:syntastic_loc_list_height=2
+let g:NERDTreeDirArrows=0
+let NERDTreeShowHidden=1
+" Ctrl + n Enable nerdtree
+map <C-n> :NERDTreeToggle<CR>
+" Ctrl + t Disable syntastic toggle
+map <C-t> :SyntasticToggleMode<CR>
+syntax enable
+
+execute pathogen#infect()
+" ale
+let b:ale_linters = ['eslint', 'prettier']
+let g:ale_javascript_prettier_eslint_options = {
+\   '--rule': {'no-extra-semi': 0},
+\}
+let g:ale_pattern_options = {
+\   '.*\.json$': {'ale_enabled': 0},
+\   '.*\.min.js$': {'ale_enabled': 0},
+\   'node_modules': {'ale_enabled': 0},
+\}
+let g:ale_completion_enabled = 1
+let g:ycm_path_to_python_interpreter="/usr/bin/python"
