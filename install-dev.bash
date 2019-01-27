@@ -1,16 +1,13 @@
 #!/bin/bash
 # Installs neovim
 apt-get update
-apt-get install -y python
-apy-get install -y python2
-apy-get install -y python3
-apt install -y python3-pip
-cd ~/
-python ~/Downloads/pip/get-pip.py
-pip2 install --user neovim
-pip3 install --user neovim
-chmod u+x ~/Downloads/neovim/nvim.appimage
-~/Downloads/neovim/nvim.appimage --appimage-extract
-echo 'export PATH="$PATH:$HOME/squashfs-root/usr/bin"' >> ~/.profile
-source $HOME/.profile
-echo 'Please now manually run: source $HOME/.profile'
+DEBIAN_FRONTEND=noninteractive apt-get -yq install cmake
+TERM=screen-256color
+apt-get install -y git
+apt-get install -y software-properties-common
+add-apt-repository ppa:neovim-ppa/stable
+apt-get update
+apt-get install -y python-dev python-pip python3-dev python3-pip
+apt-get install -y neovim
+cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
+vim +PluginInstall +qall
