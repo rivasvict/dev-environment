@@ -22,7 +22,7 @@ You will notice. This is using docker. it is not necessary actually to install t
 
 1. Copy all contents from `dotfiles` directory to your home folder
 2. Copy all contents from `dependencies` directory to `Downloads` folder.
-3. Run `install-dev.sh` and please seat back, relax, take a cup of good Colombian coffee (redundant) while the installation finishes :coffee: 
+3. Run `install-dev.bash` and please seat back, relax, take a cup of good Colombian coffee (redundant) while the installation finishes :coffee: 
 
 # To-do to add (WIP)
 
