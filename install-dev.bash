@@ -9,5 +9,7 @@ add-apt-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install -y python-dev python-pip python3-dev python3-pip
 apt-get install -y neovim
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 vim +PluginInstall +qall
