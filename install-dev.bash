@@ -13,14 +13,9 @@ apt-get install -y python-dev python-pip python3-dev python3-pip
 apt-get install -y neovim
 
 # Installs YouCompleteMe for neovim at specific version
-youCompleteCommitMeVersion="48c3bcc491a0d4d98924cc1999773c31398fbc35"
-echo "Installing YouCompleteMe for neovim at $youCompleteCommitMeVersion"
-cd "~/Downloads/ && wget https://github.com/Valloric/YouCompleteMe/archive/$youCompleteCommitMeVersion.zip" "YouCompleteMe-at-$youCompleteCommitMeVersion.zip"
-unzip "~/Downloads/YouCompleteMe-at-$youCompleteCommitMeVersion.zip" -d ~/.vim/bundle/YouCompleteMe
+git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 
 # Installs all plugins to neovim
 vim +PluginInstall +qall
-echo "Cleaning dependencies..."
-rm -frv Downloads/*
