@@ -19,3 +19,6 @@ cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 
 # Installs all plugins to neovim
 vim +PluginInstall +qall
+
+# Installs tmux
+apt-get install -y tmux
