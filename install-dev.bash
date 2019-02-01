@@ -21,4 +21,10 @@ cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 vim +PluginInstall +qall
 
 # Installs tmux
+mkdir ~/.tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 apt-get install -y tmux
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+# Adds bash extensions
+cat ~/Downloads/bash/bashrc-extension >> ~/.basrc
