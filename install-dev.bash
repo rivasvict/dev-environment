@@ -17,6 +17,9 @@ git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouComplet
 cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 
+# Installs IndentLine
+git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
+
 # Installs all plugins to neovim
 vim +PluginInstall +qall
 

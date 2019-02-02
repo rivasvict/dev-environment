@@ -9,6 +9,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Yggdroot/indentLine'
 set encoding=utf-8
 
 set expandtab
@@ -45,6 +46,7 @@ colorscheme darcula
 " colorscheme fahrenheit
 " colorscheme Crystallite
 " colorscheme firewatch
+syntax enable
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
