@@ -11,6 +11,41 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 set encoding=utf-8
 
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set colorcolumn=120
+set hlsearch
+" set autoindent
+" set tabstop=2
+set nu
+set autoread
+set cursorline
+" colorscheme railscasts
+" colorscheme darktango
+" colorscheme sadasant
+" colorscheme 256_noir
+" colorscheme vctr
+" colorscheme material
+" colorscheme wellsokai
+" FOR NORMAL ACTIVITY (HIGHT BRIGTHNESS) SUBLIME-LIKE THEME--------
+" colorscheme monokai
+colorscheme darcula
+" ---------------------------------------------------------------------------------------
+" colorscheme sky
+" colorscheme nets-away
+" colorscheme aquamarine
+" ###########################################################################################
+" FOR SPECIAL CASES (LOW BRIGTHNESS)
+" colorscheme laederon
+" colorscheme hilal
+" colorscheme nighted
+" colorscheme zazen
+" colorscheme blaquemagick
+" colorscheme fahrenheit
+" colorscheme Crystallite
+" colorscheme firewatch
+
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
