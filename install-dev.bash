@@ -30,6 +30,11 @@ git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 # Installs all plugins to neovim
 vim +PluginInstall +qall
 
+# Installs ale in neovim and eslint (a syntax checker)
+npm install -g jscs
+mkdir -p ~/.local/share/nvim/site/pack/git-plugins/start
+git clone https://github.com/w0rp/ale.git ~/.local/share/nvim/site/pack/git-plugins/start/ale
+
 # Installs tmux
 mkdir ~/.tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

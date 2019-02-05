@@ -66,3 +66,24 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set statusline+=%#warningmsg#
+set statusline+=%*
+
+let g:NERDTreeDirArrows=0
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+syntax enable
+
+" execute pathogen#infect()
+" ale
+let b:ale_linters = ['eslint', 'prettier', 'jscs']
+let g:ale_javascript_prettier_eslint_options = {
+\   '--rule': {'no-extra-semi': 0},
+\}
+let g:ale_pattern_options = {
+\   '.*\.json$': {'ale_enabled': 0},
+\   '.*\.min.js$': {'ale_enabled': 0},
+\   'node_modules': {'ale_enabled': 0},
+\}
+let g:ale_completion_enabled = 1
