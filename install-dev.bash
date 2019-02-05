@@ -9,6 +9,13 @@ add-apt-repository ppa:neovim-ppa/stable
 apt-get update
 apt-get install -y python-dev python-pip python3-dev python3-pip
 
+# Insstalls node and nvm
+apt-get install -y nodejs
+apt-get install -y npm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+export NVM_DIR="/root/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # Installs neovim
 apt-get install -y neovim
 
