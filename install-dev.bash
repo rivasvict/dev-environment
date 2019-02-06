@@ -27,6 +27,10 @@ cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
 # Installs IndentLine
 git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 
+# Installs vim-airline and vim-airline-themes
+git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes.git ~/.vim/bundle/vim-airline-themes
+
 # Installs all plugins to neovim
 vim +PluginInstall +qall
 
