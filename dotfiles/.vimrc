@@ -77,7 +77,7 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 syntax enable
 
-" execute pathogen#infect()
+execute pathogen#infect()
 " ale
 let b:ale_linters = ['eslint', 'prettier', 'jscs']
 let g:ale_javascript_prettier_eslint_options = {
