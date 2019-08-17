@@ -12,6 +12,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'alvan/vim-closetag'
+Plugin 'raimondi/delimitmate'
 set encoding=utf-8
 
 set expandtab
@@ -68,6 +70,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Facilitate the navigation in vim panes
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 set statusline+=%#warningmsg#
 set statusline+=%*
