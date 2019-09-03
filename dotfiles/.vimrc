@@ -14,6 +14,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'alvan/vim-closetag'
 Plugin 'raimondi/delimitmate'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 set encoding=utf-8
 
 set expandtab

@@ -1,4 +1,4 @@
-# Dev environment setup
+﻿# Dev environment setup
 
 This is an initiative to start automating as much as possible the setup of my dev environment.
 
@@ -29,8 +29,12 @@ You will notice. This is using docker. it is not necessary actually to install t
  - [ ] Neovim
 	 - [x] YouCompleteme
 	 - [ ] NerdTree
-	 - [ ] Vim-airline
-	 - [ ] Vim-airline-themes
-	 - [ ] Ale (linter)
+	 - [x] Vim-airline
+	 - [x] Vim-airline-themes
+	 - [x] Ale (linter)
+     - [x] vim-javascript
+     - [x] vim-jsx
+     - [x] vim-closetag
+     - [ ] vim-ctrlp (https://github.com/kien/ctrlp.vim)
  - [ ] Node
  - [ ] Tmux
