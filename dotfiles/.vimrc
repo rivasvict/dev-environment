@@ -53,6 +53,9 @@ colorscheme darcula
 " colorscheme Crystallite
 " colorscheme firewatch
 syntax enable
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
