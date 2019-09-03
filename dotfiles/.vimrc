@@ -89,7 +89,9 @@ syntax enable
 
 execute pathogen#infect()
 " ale
-let b:ale_linters = ['eslint', 'prettier', 'jscs']
+let g:ale_linters = {
+\  'javascript': ['eslint', 'prettier'],
+\}
 let g:ale_javascript_prettier_eslint_options = {
 \   '--rule': {'no-extra-semi': 0},
 \}
