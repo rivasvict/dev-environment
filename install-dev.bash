@@ -54,3 +54,6 @@ apt-get install -y tmux
 
 # Adds bash extensions
 cat ~/Downloads/bash/bashrc-extension >> ~/.basrc
+
+# Adds fuzzy finder ctrl+p
+git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim ~/.vim
